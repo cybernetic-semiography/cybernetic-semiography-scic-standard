@@ -51,6 +51,26 @@ Use the [Feature Request template](.github/ISSUE_TEMPLATE/feature_request.md).
 6. **Run linters** with `black src/` and `flake8 src/`
 7. **Submit your pull request**
 
+### Proposing Standards (RFC Process)
+
+To propose extensions or modifications to the SCIC standard:
+
+1. **Review existing RFCs** in `docs/RFC/`
+2. **Create a new RFC** following the template in `rfc-0001-scic-standard.md`
+3. **Name your RFC** as `rfc-XXXX-descriptive-title.md`
+4. **Submit a pull request** with your RFC
+5. **Engage in discussion** with the community
+6. **Iterate based on feedback**
+7. **Final approval** by core maintainers
+
+See [docs/RFC/README.md](docs/RFC/README.md) for detailed RFC process.
+
+**RFC Topics:**
+- New features or extensions
+- Modifications to existing specifications
+- Deprecation proposals
+- Community guidelines
+
 ## Development Setup
 
 ### Prerequisites
