@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoSigm Genesis Lab v0.1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>⧬ NeoSigm Genesis Lab</h1>
+            <p>Interface para geração e validação de glifos do NeoSigm Protocol</p>
+            <p class="subtitle">Validação Teórica de Semiografia Cibernética</p>
+        </header>
+
+        <main>
+            <div class="controls">
+                <div class="control-group">
+                    <label for="glyph-select">Selecione um Glifo (AX-Core):</label>
+                    <select id="glyph-select">
+                        <option value="GX-0001">GX-0001 (Identidade / Ponto Central)</option>
+                        <option value="GX-0002" selected>GX-0002 (Relação / Dualidade)</option>
+                        <option value="GX-0003">GX-0003 (Transformação / Vetor)</option>
+                        <option value="GX-0004">GX-0004 (Ciclo / Anel)</option>
+                        <option value="GX-0005">GX-0005 (Fluxo / Espiral)</option>
+                        <option value="GX-0006">GX-0006 (Rede / Interconexão)</option>
+                        <option value="GX-0007">GX-0007 (Frequência / Oscilação)</option>
+                        <option value="GX-0008">GX-0008 (Simetria / Reflexão)</option>
+                        <option value="GX-0009">GX-0009 (Ordem / Hierarquia)</option>
+                        <option value="GX-0010">GX-0010 (Caos / Entropia)</option>
+                        <option value="GX-0011">GX-0011 (Fusão / Convergência)</option>
+                        <option value="GX-0012">GX-0012 (Divergência / Expansão)</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <button id="generate-btn" class="btn-primary">Gerar Glifo</button>
+                    <button id="export-svg-btn" class="btn-secondary">Exportar SVG</button>
+                    <button id="export-json-btn" class="btn-secondary">Exportar JSON</button>
+                </div>
+            </div>
+
+            <div class="status-bar">
+                <span id="status-text">Pronto para gerar glifos...</span>
+            </div>
+
+            <div class="society-viewer">
+                <h2>🧠 Sociedade de Glifos (Minskyan Runtime)</h2>
+                <div id="society-container" class="society-canvas-container">
+                    <canvas id="society-canvas"></canvas>
+                    <div class="society-overlay">
+                        <p>Estado da Rede Neural Simbólica</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="output-area">
+                <div class="glyph-viewer">
+                    <h2>Visualizador de Glifo</h2>
+                    <div id="svg-container" class="svg-canvas">
+                        <!-- O SVG do glifo será inserido aqui -->
+                    </div>
+                    <div class="glyph-info">
+                        <p><strong>ID:</strong> <span id="glyph-id">GX-0002</span></p>
+                        <p><strong>Classe:</strong> <span id="glyph-class">CL-REL</span></p>
+                        <p><strong>Papel Semântico:</strong> <span id="glyph-role">Relação</span></p>
+                        <p><strong>Hash Canônico:</strong> <span id="glyph-hash" class="hash-text">sha256:...</span></p>
+                        <p><strong>Status Blockchain:</strong> <span id="blockchain-status" class="hash-text">Não
+                                Registrado</span></p>
+                    </div>
+                </div>
+                <div class="data-viewer">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="json">JSON</button>
+                        <button class="tab-btn" data-tab="svg">SVG</button>
+                        <button class="tab-btn" data-tab="info">Informações</button>
+                    </div>
+                    <div id="json-tab" class="tab-content active">
+                        <h3>Metadados Canônicos (JSON)</h3>
+                        <pre id="json-output"></pre>
+                    </div>
+                    <div id="svg-tab" class="tab-content">
+                        <h3>Código Vetorial (SVG)</h3>
+                        <pre id="svg-code-output"></pre>
+                    </div>
+                    <div id="info-tab" class="tab-content">
+                        <h3>Informações Técnicas</h3>
+                        <div id="info-output"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>NeoSigm Genesis Lab v0.1 | Protótipo de Validação Teórica | Outubro 2025</p>
+            <p>Baseado em: "NeoSigm Protocol: Proposta de uma Semiografia Cibernética para Comunicação
+                Inter-Inteligência"</p>
+        </footer>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

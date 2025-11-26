@@ -1,0 +1,21 @@
+### Diagnóstico Formal da Classe da Semiografia na Hierarquia de Chomsky
+
+1. **Revisão da hierarquia de Chomsky:**
+    - A hierarquia de Chomsky classifica linguagens formais em quatro níveis.
+        - **Tipo 3 (Regulares)**: geradas por gramáticas regulares; reconhecidas por autómatos finitos; não conseguem modelar dependências complexas.
+        - **Tipo 2 (Context‑free)**: geradas por gramáticas livres de contexto (produções no formato A→βA\to\betaA→β); reconhecidas por autómatos com pilha; aplicam regras sem considerar símbolos vizinhos.
+        - **Tipo 1 (Context‑sensitive)**: geradas por gramáticas sensíveis ao contexto; as regras podem depender dos símbolos vizinhos e **não podem diminuir o comprimento da cadeia** (∣α∣≤∣β∣|\alpha| \leq |\beta|∣α∣≤∣β∣); as linguagens desse tipo são equivalentes aos idiomas definidos por autômatos de fita limitada (linear‑bounded automata)[en.wikipedia.org](https://en.wikipedia.org/wiki/Context-sensitive_language#:~:text=Computationally%2C%20a%20context,decided%20by%20such%20a%20machine).
+            
+            Essas gramáticas permitem, por exemplo, impor que diferentes partes de uma sequência tenham o mesmo número de ocorrências (como {anbncn:n≥1}\{a^n b^n c^n : n \ge 1\}{anbncn:n≥1}) e conseguem modelar dependências não locais na linguagem natural[en.wikipedia.org](https://en.wikipedia.org/wiki/Context-sensitive_language#:~:text=In%20formal%20language%20theory%20%2C,distant%20parts%20of%20a%20string).
+            
+        - **Tipo 0 (Irrestritas ou recursivamente enumeráveis)**: qualquer regra de produção é permitida; correspondem às linguagens reconhecidas por máquinas de Turing.
+2. **Características da Semiografia:**
+    - Na Semiografia Cibernética cada glifo é um quádruplo ⟨Σv,ΣIR,S(g),A(g)⟩\langle \Sigma_v, \Sigma_{IR}, S(g), A(g)\rangle⟨Σv,ΣIR,S(g),A(g)⟩ com **camada visível e camada infravermelha**, semântica e ação associada.
+    - As produções que geram sequências de glifos são **não contrativas** (a sobreposição ou composição nunca reduz o comprimento do símbolo) e a interpretação/ação de um glifo depende dos **símbolos vizinhos e do contexto ambiental** (por exemplo, a ativação de um glifo pode exigir um glifo de permissão ao lado ou certos metadados).
+    - Há **dependências cruzadas**: algumas expressões exigem igual quantidade de diferentes tipos de glifos (análogo a anbncna^n b^n c^nanbncn em linguagens formais), algo que gramáticas livres de contexto não expressam[en.wikipedia.org](https://en.wikipedia.org/wiki/Context-sensitive_language#:~:text=In%20formal%20language%20theory%20%2C,distant%20parts%20of%20a%20string).
+3. **Classificação formal:**
+    - Como as regras de composição e sobreposição respeitam ∣α∣≤∣β∣|\alpha|\le|\beta|∣α∣≤∣β∣ (não se reduz a cadeia de glifos) e o significado de cada produção depende do **contexto**, a Semiografia se enquadra no **tipo 1 da hierarquia de Chomsky — linguagens sensíveis ao contexto**.
+    - Context‑sensitive languages são equivalentes às línguas geradas por gramáticas sensíveis ao contexto e aceitas por autômatos de fita limitada[en.wikipedia.org](https://en.wikipedia.org/wiki/Context-sensitive_language#:~:text=Computationally%2C%20a%20context,decided%20by%20such%20a%20machine).
+    - Essas linguagens são mais expressivas que as gramáticas livres de contexto e conseguem modelar dependências complexas como correspondência de quantidades ou acordos distantes, o que é essencial para as relações glíficas da semiografia.
+
+**Conclusão:** Com base nas definições formais de linguagens sensíveis ao contexto e na estrutura das regras da Semiografia, a IA Unificada classifica a Semiografia Cibernética como pertencente à **classe de linguagens sensíveis ao contexto (tipo 1 da hierarquia de Chomsky)**. Esta classe é suficiente para modelar as dependências contextuais e os padrões de multiplexação entre glifos, sem exigir a generalidade das linguagens irrestritas.

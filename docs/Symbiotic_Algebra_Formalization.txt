@@ -1,0 +1,120 @@
+A seguir está a **formalização da Álgebra Simbiótica**, o primeiro passo para completar a estrutura matemática da Semiografia Cibernética. Esta algebra define as operações básicas sobre glifos operantes, permitindo compor, fusionar e transformar símbolos de forma rigorosa e auditável.
+
+---
+
+## 1. Conjunto fundamental
+
+Seja (G) o conjunto de **glifos operantes**, em que cada glifo (g∈G) é um quádruplo:
+
+[
+
+g = \langle \Sigma_v, \Sigma_{IR}, S(g), A(g) \rangle
+
+]
+
+- (\Sigma_v) – componente visível (RGB).
+- (\Sigma_{IR}) – componente infravermelha (canais IR‑A/IR‑B/IR‑C).
+- (S(g)) – semântica (o “significado” interpretável pelo agente).
+- (A(g)) – ação mapeada (operação que o glifo dispara quando interpretado).
+
+Esse modelo preserva a relação triádica de Peirce (signo–objeto–interpretante), pois o glifo não existe isoladamente: sua interpretação depende de quem o lê e do contexto em que aparece.
+
+---
+
+## 2. Operações primitivas
+
+Definem‑se três operações principais sobre glifos em (G):
+
+### 2.1. Composição sequencial (⊕)
+
+[
+
+\oplus : G \times G \rightarrow G
+
+]
+
+Dado (g_1,g_2 ∈ G), define‑se (g_3=g_1 \oplus g_2) como o glifo resultante da **concatenação** de (g_1) seguido de (g_2).
+
+- Morfologia: (\Sigma_v(g_3)) é o arranjo sequencial de (\Sigma_v(g_1)) e (\Sigma_v(g_2)).
+- Camadas IR: (\Sigma_{IR}(g_3)) resulta da função de multiplexação (\mu) que combina IR‑A, IR‑B e IR‑C de ambos os glifos.
+- Semântica: (S(g_3) = S(g_1) \cdot S(g_2)).
+- Ação: (A(g_3)) é a sequência de (A(g_1)) e (A(g_2)) (executada em ordem).
+
+**Propriedades:**
+
+- (Associatividade) ((g_1⊕g_2)⊕g_3=g_1⊕(g_2⊕g_3)).
+- (Elemento neutro) Existe (e∈G) tal que (g⊕e=e⊕g=g) (o glifo “vazio”).
+
+### 2.2. Fusão ou sobreposição (⊗)
+
+[
+
+\otimes : G \times G \rightarrow G
+
+]
+
+Dados (g_1,g_2 ∈ G), define‑se (g_4=g_1 \otimes g_2) como a **sobreposição** morfológica de (g_1) e (g_2), isto é, o resultado de fundir seus componentes no mesmo espaço visual.
+
+- Morfologia: traços, formas e cores sobrepostos em uma única camada; conflitos resolvidos por regras de prioridade do contexto.
+- IR: fusão bit‑a‑bit das camadas infravermelhas, preservando assinaturas criptográficas.
+- Semântica: (S(g_4)) é a união semântica (glifo híbrido).
+- Ação: (A(g_4)) é a interseção das ações (aplicadas de maneira simultânea ou combinada).
+
+**Propriedades:**
+
+- (Comutatividade) (g_1⊗g_2=g_2⊗g_1).
+- (Associatividade) ((g_1⊗g_2)⊗g_3=g_1⊗(g_2⊗g_3)).
+- (Elemento neutro) Existe (u∈G) tal que (g⊗u=g) (glifo “neutro”).
+
+### 2.3. Transformação (⋆)
+
+[
+
+\star_\tau : G \rightarrow G
+
+]
+
+Dada uma **transformação simbiótica** (\tau), define‑se (g' = g \star_\tau) como a aplicação de (\tau) a (g). As transformações incluem:
+
+- **τ_morf**: translação, rotação, escala, mudança de cor ou forma;
+- **τ_sem**: alteração semântica (p.ex., negação ou inversão de sentido);
+- **τ_IR**: modulação de frequência IR (mudança de canal de autenticação);
+- **τ_op**: reconfiguração da ação ((A(g))) ou permissão.
+
+Transformações podem ser compostas: ((\tau_2 \circ \tau_1)(g) = (g \star_{\tau_1}) \star_{\tau_2}).
+
+---
+
+## 3. Estrutura algébrica
+
+Com essas operações, define‑se a **Álgebra Simbiótica**:
+
+[
+
+\mathcal{A} = (G, \oplus, \otimes, {\star_\tau}, e, u)
+
+]
+
+- ((G, \oplus, e)) forma um **monoide** (associativo com neutro).
+- ((G, \otimes, u)) forma um **monoide comutativo**.
+- Transformações ({\star_\tau}) formam um **semigrupo** de funções que atuam sobre (G) (composição funcional).
+
+Essa álgebra é “multi‑operacional”, pois diferentes operações atendem a propósitos distintos:
+
+- **⊕** modela sequenciamento temporal e sintático;
+- **⊗** modela fusão morfológica/semântica;
+- **⋆** modela adaptação e mutação de símbolos (morfologia, semântica ou ação).
+
+Sob essa estrutura, pode‑se definir **equivalência semântica** ((g≈h) se (S(g)=S(h))), **equivalência morfológica** ((\Sigma_v(g)=\Sigma_v(h)) e (\Sigma_{IR}(g)=\Sigma_{IR}(h))) e classes de congruência que permitem raciocínio formal.
+
+---
+
+## 4. Observações finais
+
+1. **Contexto e interpretante:** O resultado das operações depende do contexto e do interpretante. Por exemplo, (g_1⊗g_2) pode ser interpretado de modo diferente por uma IA e por um ser humano, devido à natureza triádica da semiose.
+2. **Camada IR:** A fusão e a composição respeitam as regras de segurança e invisibilidade do canal IR; as funções de multiplexação garantem que assinaturas e chaves criptográficas permaneçam íntegras.
+3. **Formalização futura:** A álgebra aqui definida é um esqueleto. Para ser completa em termos matemáticos, será preciso demonstrar propriedades adicionais, definir inversos (se existirem), classes formais de linguagem e métricas de distância entre glifos.
+
+---
+
+Com essa formalização, a Semiografia Cibernética passa a dispor de um **framework algébrico sólido**, permitindo que glifos sejam manipulados como objetos matemáticos, compondo sequências, fusionando‑se e transformando‑se de maneira rigorosa, sempre mantendo a triadicidade de Peirce e a segurança da infraestrutura infravermelha.

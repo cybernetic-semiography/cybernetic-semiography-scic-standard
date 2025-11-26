@@ -1,0 +1,33 @@
+
+log_level: INFO
+templates_dir: templates
+output_dir: output
+backup_dir: backups
+temp_dir: temp
+
+esg:
+  metrics_enabled: true
+  custom_templates: {}
+  output_format: markdown
+  validation_level: strict
+
+sync:
+  watch_paths: ["./docs"]
+  ignore_patterns:
+    - .git
+    - venv
+    - __pycache__
+    - .gemini
+
+guardrive:
+  enabled: true
+  base_path: .
+  docs_path: docs
+  dev_path: src
+  sync_schedule: "0 * * * *"
+  path_mappings: []
+  doc_handlers:
+    default:
+      file_extensions: ["md", "txt"]
+  version_control:
+    enabled: false
