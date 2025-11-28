@@ -48,6 +48,48 @@ SCIC is **inspired by Marvin Minsky's *Society of Mind*** — integrating agent-
 - Minskyan cognitive architecture
 - Topological semiotic theory (Peirce)
 - Opto-electronic multiplexing (IR-A/B/C)
+
+---
+
+## 🎨 Physical Glyph Format
+
+![SCIC Glyph - Technical Blueprint](docs/assets/scic_glyph_technical.png)
+
+The SCIC Glyph is a **circular holographic sticker (Ø 30mm)** with 5 layers:
+
+1. **Holographic 3D Layer** - Visual security with iridescent color-shifting effect
+2. **IR-A Layer (850nm)** - Identity data (200 bytes)
+3. **IR-B Layer (905nm)** - Action/Command data (200 bytes)
+4. **IR-C Layer (940nm)** - Governance/Audit data (200 bytes)
+5. **Adhesive Layer** - Permanent tamper-evident fixation
+
+**Total Capacity:** 600 bytes across 3 invisible IR layers  
+**Reading:** Multi-spectral IR camera (850/905/940nm)  
+**Encoding:** 40×40 binary spatial matrix per layer
+
+📖 **[Complete Physical Specification →](docs/FORMATO_FISICO_GLYPH.md)**
+
+---
+
+## 🌀 Quantum Data Registration Process
+
+SCIC transforms abstract data into living matter through **7 quantum transformations**:
+
+```
+1. Intention → Structured Data (JSON)
+2. Data → Binary (ASCII encoding)
+3. Binary → Spatial Matrix (40×40 grid)
+4. Matrix → Geometry (x,y coordinates)
+5. Geometry → SVG (vector file)
+6. SVG → Physical Matter (hologram + IR ink)
+7. Matter → Behavior (agent activation)
+```
+
+**Result:** A physical symbol that stores data, activates cognitive agents, executes actions, and maintains blockchain audit trails.
+
+📖 **[Complete Quantum Process →](docs/PROCESSO_QUANTICO_SCIC.md)**
+
+---
 - Distributed ledger technology (blockchain)
 - Formal operational cycles (cybernetic control theory)
 

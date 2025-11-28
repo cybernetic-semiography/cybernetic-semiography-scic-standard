@@ -13,6 +13,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Production blockchain integration (Ethereum/Polygon)
 - Public API with Swagger documentation
 
+## [0.2.0] - 2025-11-28
+
+### Added
+- **Physical Glyph Specification**
+  - Complete format specification (circular Ø 30mm, 5 layers)
+  - Technical blueprint diagram with cross-section view
+  - IR pattern encoding documentation (40×40 binary spatial matrix)
+  - Material specifications and layer details
+- **Quantum Data Registration Process**
+  - Documentation of 7 transformation stages
+  - Complete workflow from intention to physical glyph
+  - Programmatic generation examples
+- **IR Glyph Modules**
+  - `ir_glyph_generator.py` - Programmatic glyph generation
+  - `ir_glyph_decoder.py` - IR pattern reading and decoding
+  - Example workflow (`04_ir_glyph_workflow.py`)
+- **Testing Infrastructure**
+  - Basic unit tests for IR glyph generation
+  - Test fixtures and validation
+
+### Changed
+- README.md updated with glyph format section and technical diagram
+- README.md updated with quantum process overview
+- Enhanced documentation structure with visual aids
+
+### Documentation
+- `docs/FORMATO_FISICO_GLYPH.md` - Public physical specification
+- `docs/PROCESSO_QUANTICO_SCIC.md` - Public quantum process documentation
+- `docs/assets/scic_glyph_technical.png` - Technical blueprint diagram
+
+
 ## [0.1.0] - 2025-11-25
 
 ### Added
