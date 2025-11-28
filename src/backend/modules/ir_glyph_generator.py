@@ -207,8 +207,8 @@ class IRGlyphGenerator:
             'hash': self._compute_hash(glyph_id, ir_data)
         }
         
-        # Add as SVG description
-        dwg.defs.add(dwg.desc(json.dumps(metadata, indent=2)))
+        # Metadata is printed to console during generation
+        # SVG comment would be: <!-- metadata -->
     
     def _text_to_binary(self, text: str) -> str:
         """
